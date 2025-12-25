@@ -11,7 +11,7 @@
 서버를 띄운 후 [여기](https://www.todobackend.com/specs/index.html?http://localhost:8080) 를 클릭해서 pass/fail을 확인해보세요. </br>
 - 또는 [여기](https://www.todobackend.com/specs/index.html)에 접속한 뒤 `http://localhost:8080/` 를 복사 붙여넣기기 해 넣고 돌려보세요.</br>
 - 브라우저 보안모드가 아니라면 아래 에러가 뜰 수 있으며 이는 백앤드잘못이 아닙니다.
-    - ```angular2html 
+  ```angular2html 
      the api root responds to a GET (i.e. the server is up and accessible, CORS headers are set up) 
      Error: global leaks detected: crosswebex_nativecall, touchenex_nativecall 
       at Runner.checkGlobals (https://www.todobackend.com/specs/js/lib/mocha.js:4532:21) 
@@ -22,8 +22,8 @@
       at _fulfilled (https://www.todobackend.com/specs/js/lib/q.js:787:54) 
       at https://www.todobackend.com/specs/js/lib/q.js:816:30 
       at Promise.promise.promiseDispatch (https://www.todobackend.com/specs/js/lib/q.js:749:13) 
-      at https://www.todobackend.com/specs/js/lib/q.js:557:44 
-      -  
+      at https://www.todobackend.com/specs/js/lib/q.js:557:44
+  ```
 
 
 # API 문서 확인 하기:
