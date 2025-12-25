@@ -26,7 +26,7 @@ public class ToDoEntity {
     private String title;
 
     @Column(nullable = false)
-    private Long order;
+    private Long priority;
 
     @Column(nullable = false)
     private Boolean completed;

@@ -31,7 +31,7 @@ public class ToDoService {
     public ToDoEntity add(ToDoRequest req) {
         ToDoEntity entity = new ToDoEntity();
         entity.setTitle(req.getTitle());
-        entity.setOrder(req.getOrder());
+        entity.setPriority(req.getOrder());
         entity.setCompleted(req.getCompleted());
         return this.repository.save(entity);
     }
@@ -59,7 +59,7 @@ public class ToDoService {
             entity.setTitle(req.getTitle());
         }
         if (req.getOrder() != null) {
-            entity.setOrder(req.getOrder());
+            entity.setPriority(req.getOrder());
         }
         if (req.getCompleted() != null) {
             entity.setCompleted(req.getCompleted());

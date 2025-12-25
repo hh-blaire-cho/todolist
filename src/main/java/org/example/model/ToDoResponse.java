@@ -17,7 +17,7 @@ public class ToDoResponse {
     public ToDoResponse(ToDoEntity toDoEntity) {
         this.id = toDoEntity.getId();
         this.title = toDoEntity.getTitle();
-        this.order = toDoEntity.getOrder();
+        this.order = toDoEntity.getPriority();
         this.completed = toDoEntity.getCompleted();
 
         // url은 투두 엔티티에 없는 정보로 별도 기입 필요
