@@ -25,7 +25,7 @@ public class ToDoEntity {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false, name="toDoOrder")
+    @Column(nullable = false)
     private Long order;
 
     @Column(nullable = false)
