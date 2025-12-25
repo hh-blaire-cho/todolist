@@ -1,7 +1,10 @@
 package org.example.controller;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
 import org.example.model.ToDoEntity;
 import org.example.model.ToDoRequest;
 import org.example.model.ToDoResponse;
@@ -9,8 +12,6 @@ import org.example.service.ToDoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Slf4j
 @AllArgsConstructor
@@ -52,13 +53,11 @@ public class ToDoController {
     }
 
     @PatchMapping("{id}")
-    public ResponseEntity<ToDoResponse> update(@PathVariable Long id,
-        @RequestBody ToDoRequest req) {
+    public ResponseEntity<ToDoResponse> update(@PathVariable Long id, @RequestBody ToDoRequest req) {
         log.info("UPDATE");
         ToDoEntity result = service.updateById(id, req);
         return ResponseEntity.ok(new ToDoResponse(result));
     }
-
 
     @DeleteMapping
     public ResponseEntity<?> deleteAll() {
@@ -70,10 +69,7 @@ public class ToDoController {
     @DeleteMapping("{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         log.info("DELETE ONE");
-        service.deleteById(id); //void
+        service.deleteById(id); // void
         return ResponseEntity.ok().build();
     }
 }
-
-
-

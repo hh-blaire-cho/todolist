@@ -2,6 +2,26 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.0'
     id 'io.spring.dependency-management' version '1.1.5'
+    id 'com.diffplug.spotless' version '6.11.0'
+    id 'com.adarshr.test-logger' version '4.0.0'
+}
+
+spotless {
+    java {
+        target '**/*.java'
+        targetExclude 'src/main/generated/**/*.java'
+        eclipse().configFile 'formatter.xml'
+        importOrder('java', 'javax', 'jakarta', 'org', 'com')
+        removeUnusedImports()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+
+    // YAML YML 파일 포매팅 추가
+    format 'yaml', {
+        target '**/*.yaml', '**/*.yml'
+        prettier()
+    }
 }
 
 group = 'org.example'

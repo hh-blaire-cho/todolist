@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profiles version="12">
+  <profile kind="CodeFormatterProfile" name="Custom" version="12">
+    <!-- 🔥 공백 사용 -->
+    <setting id="org.eclipse.jdt.core.formatter.tabulation.char" value="space"/>
+    <!-- 들여쓰기 = 4 spaces -->
+    <setting id="org.eclipse.jdt.core.formatter.indentation.size" value="4"/>
+    <!-- 탭 크기 = 4 (의미상 유지) -->
+    <setting id="org.eclipse.jdt.core.formatter.tabulation.size" value="4"/>
+  </profile>
+</profiles>
