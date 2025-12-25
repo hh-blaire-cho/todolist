@@ -12,3 +12,14 @@ spring:
     hibernate.ddl-auto: create
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+springdoc:
+  packages-to-scan: org.example.controller
+  show-spring-data-rest: false
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: method
+    display-request-duration: true
