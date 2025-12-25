@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Data
 @Entity
-@Table(name = "mytodotable")
+@Table(name = "todo")
 //sql에 해당 테이블로 저장한다. DB는 application.yaml 확인한다.
 //카멜캐이스로 쓰면, 스네이크로 바꿔주는 듯. 그냥 전체 소문자하자.
 @NoArgsConstructor
