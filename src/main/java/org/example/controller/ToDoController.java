@@ -22,7 +22,7 @@ public class ToDoController {
 
     @PostMapping
     public ResponseEntity<ToDoResponse> create(@RequestBody ToDoRequest req) {
-        System.out.println("CREATE");
+        log.info("CREATE ONE");
         if (ObjectUtils.isEmpty(req.getTitle())) {
             return ResponseEntity.badRequest().build();
         }
@@ -69,7 +69,7 @@ public class ToDoController {
 
     @DeleteMapping("{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
-        log.info("DELETE");
+        log.info("DELETE ONE");
         service.deleteById(id); //void
         return ResponseEntity.ok().build();
     }
